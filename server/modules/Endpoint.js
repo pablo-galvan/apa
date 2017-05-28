@@ -7,7 +7,7 @@ let logger = require('winston');
 class Endpoint {
     constructor(api) {
         this.api = api;
-        this.request = axios.create({
+        this.service = axios.create({
             baseURL: 'https://almundo.com.ar/'
         });
 
