@@ -1,21 +1,16 @@
 {
-  "name": "apa",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "app-test",
+  "version": "0.0.0",
+  "license": "MIT",
+  "angular-cli": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ng": "ng",
+    "start": "ng serve",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update --standalone false --gecko false",
+    "e2e": "protractor"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pablo-galvan/apa.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pablo-galvan/apa/issues"
-  },
-  "homepage": "https://github.com/pablo-galvan/apa#readme",
+  "private": true,
   "dependencies": {
     "@angular/common": "^2.3.1",
     "@angular/compiler": "^2.3.1",
@@ -25,26 +20,12 @@
     "@angular/platform-browser": "^2.3.1",
     "@angular/platform-browser-dynamic": "^2.3.1",
     "@angular/router": "^3.3.1",
-    "async": "^2.4.1",
-    "axios": "^0.16.1",
-    "body-parser": "^1.17.2",
-    "compression": "^1.6.2",
     "core-js": "^2.4.1",
-    "express": "^4.15.3",
-    "helmet": "^3.6.1",
-    "mongoose": "^4.10.3",
-    "morgan": "^1.8.2",
-    "underscore": "^1.8.3",
-    "ts-helpers": "^1.1.1",
     "rxjs": "^5.0.1",
-    "webpack": "^2.6.1",
-    "winston": "^2.3.1",
+    "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^4.0.1",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "html-webpack-plugin": "^2.28.0",
     "@angular/compiler-cli": "^2.3.1",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",

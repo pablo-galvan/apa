@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es-AR" ng-app="appTest" ng-controller="MainController">
+    <head>
+        <meta charset="UTF-8">
+        <title>Test</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body class="{{ page }}" ng-controller="HomeController">
+        <div>
+            <ng-include src="'/static/views/content.html'"></ng-include>
+        </div>
+        <script src="/static/js/lib/angular/angular.min.js"></script>
+        <script src="/static/js/lib/angular/angular-cookies.min.js"></script>
+        <script src="/static/js/lib/angular/angular-route.min.js"></script>
+        <script src="/static/main.min.js"></script>
+    </body>
+</html>

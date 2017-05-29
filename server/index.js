@@ -37,10 +37,7 @@ class Server {
         this.app.disable('x-powered-by');
 
         this.app.use('/api', this.api);
-        this.app.use('/static', express.static('public/static/'));
-        this.app.get('*', (req, res) => {
-            res.sendFile(path.resolve('public/index.html'));
-        });
+        this.app.use('/', express.static('dist'));
 
         this.api.use((req, res, next) => {
             res.header('Access-Control-Allow-Origin', '*');
