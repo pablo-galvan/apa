@@ -1,0 +1,27 @@
+  <div class="col-lg-8">
+    <article *ngFor="let hotel of hotels" class="row">
+      <div class="col-lg-4">
+        <img src="{{ hotel.images[0].url }}" class="img-responsive"/>
+      </div>
+      <div class="col-lg-6">
+        <h1>{{ hotel.name }}</h1>
+        <span>{{ hotel.stars }} estrellas</span>
+        <p>{{ hotel.rate.meal_plan.description }}</p>
+        <ul>
+          <li *ngFor="let amenitie of hotel.amenities">
+            <p>{{ amenitie.description }}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-2">
+        <p>Precio por habitación</p>
+        <h2><span>{{ hotel.rate.price.currency.code }}</span>{{ hotel.rate.price.per_night }}</h2>
+        <p>Impuestos y tasas no incluidos</p>
+        <ul>
+          <li *ngFor="let paymentMethods of hotel.payment_methods">
+            <p>{{ paymentMethods.description }}</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </div>
